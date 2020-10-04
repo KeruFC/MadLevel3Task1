@@ -20,9 +20,22 @@
         android:name="com.example.madlevel3task1.RatingFragment"
         android:label="@string/Rating_fragment_label"
         tools:layout="@layout/fragment_rating">
-
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            android:id="@+id/action_RatingFragment_to_summaryFragment"
+            app:destination="@id/summaryFragment" />
+        <action
+            android:id="@+id/action_RatingFragment_to_StartFragment"
+            app:destination="@id/StartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/summaryFragment"
+        android:name="com.example.madlevel3task1.SummaryFragment"
+        android:label="fragment_summary"
+        tools:layout="@layout/fragment_summary" >
+        <action
+            android:id="@+id/action_summaryFragment_to_StartFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/StartFragment"
             app:destination="@id/StartFragment" />
     </fragment>
 </navigation>
